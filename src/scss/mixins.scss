@@ -1,0 +1,34 @@
+// Вставка миксина @include mixin_name();
+
+// Шрифт
+@mixin Font($font-name: "Montserrat", $font-weight: 400, $font-style: normal) {
+  font-family: $font-name, "Arial", sans-serif; // шрифты без засечек
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+// Добавление шрифтов в fonts.scss
+@mixin FontFace($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+      url("../fonts/#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+// Обнуление списка
+@mixin List-Reset($margin-top-value: 0, $margin-bottom-value: 0, $padding-left-value: 0) {
+  margin-top: $margin-top-value;
+  margin-bottom: $margin-bottom-value;
+  padding-left: $padding-left-value;
+  list-style: none;
+}
+
+// Анимация
+@mixin Transition($transition-property: all, $transition-duration: 0.3s) {
+  transition-property: $transition-property;
+  transition-duration: $transition-duration;
+}

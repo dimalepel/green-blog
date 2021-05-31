@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+
+  @include Font();
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+  //overflow: hidden;
+
+  &.overflow {
+    overflow: hidden;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 14px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+
+  @include Transition();
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  @include Transition();
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+sup,
+sub {
+  font-size: calc((2 / 3) * 100%);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  appearance: none; // убираем тень ios
+}

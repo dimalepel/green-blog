@@ -1,0 +1,27 @@
+include mixins
+
+block globalVars
+  - var siteTitle = "Автостекла";
+  - var lang = "ru";
+  - var charset = "UTF-8";
+
+block vars
+  - var pageTitle = " ";
+
+doctype html
+html(lang=lang)
+  head
+    meta(charset=charset)
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    title #{pageTitle} | #{siteTitle}
+    link(rel="icon", href="favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="styles/styles.css")
+  body
+    .page-wrapper
+      include blocks/header
+
+      main.page-main
+        block content
+
+      include blocks/footer
+      include blocks/scripts

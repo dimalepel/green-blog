@@ -1,0 +1,25 @@
+:root {
+  // Template base colors
+  --color-accent: #f51233;        // 1
+  --color-base-blue: #2c375d;     // 2
+  --color-extra-accent: #ad0019;  // 3
+  --color-brown: #c68e55;         // 4
+  --color-dark-accent: #c52835;   // 5
+  --color-dark: #303038;          // 6
+  --color-custom-red: #eb5757;    // Red
+  --color-extra-black: #181c1f;   // Extra black
+  --color-blue: #163da2;          // Blue
+  --color-weak-grey: #f4f4f4;     // Weak grey
+  --color-base-black: #333333;    // Base black
+  --color-faint-grey: #828282;    // Faint grey
+  --color-gray: #f2f2f2;          // Faint gray
+  --color-podlojka-grey: #f8f8f8; // Podlojka grey
+
+  // Base color
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  // Template custom color
+  --color-dark-blue: #0d0c3b;
+  --color-accent-light: #ffe4e7;
+}

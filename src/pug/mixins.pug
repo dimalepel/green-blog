@@ -1,0 +1,56 @@
+mixin servicesItem(thumbnailTitle, itemitemTitle, itemDescription)
+  li.services-item.services__item
+    img(src=`images/${thumbnailTitle}`).services-item__thumbnail
+    .services-item__content
+      p.services-item__title= itemitemTitle
+      p.services-item__description= itemDescription
+      a(href="#").services-item__detail подробнее
+
+mixin priceItem(priceDescription, priceValue)
+  li.price-item.price__item
+    p.price-item__description= priceDescription
+    p.price-item__coast от
+      span.price-item__value= priceValue
+
+mixin newsItem(imagesTitle, title, description, date, swiperActive)
+  if swiperActive
+    li.news-item.news-list__item.swiper-slide
+      a(href="#").news-item__inner
+        img(src=`images/${imagesTitle}`).news-item__thumbnail
+        p.news-item__title= title
+        p.news-item__description= description
+        if date
+          p.news-item__date= date
+  else
+    li.news-item.news-list__item
+      a(href="#").news-item__inner
+        img(src=`images/${imagesTitle}`).news-item__thumbnail
+        p.news-item__title= title
+        p.news-item__description= description
+        if date
+          p.news-item__date= date
+
+mixin svg(name, iconClass)
+  if iconClass
+    svg(class= iconClass)
+      use(xlink:href=`images/sprite.svg#${name}`)
+  else
+    svg
+      use(xlink:href=`images/sprite.svg#${name}`)
+
+mixin advantagesItem(advantageIconTitle, advantageDescription)
+  li.advantages-item.advantages__item
+    +svg(`${advantageIconTitle}`, "advantages-item__icon")
+    p.advantages-item__description= advantageDescription
+
+mixin faqItem(faqItemTitle, faqItemDescription, isActiveClass)
+  if isActiveClass
+    li.faq-list__item.faq-item
+      p.faq-item__title.active= faqItemTitle
+      .faq-item_description
+        p= faqItemDescription
+  else
+    li.faq-list__item.faq-item
+      p.faq-item__title= faqItemTitle
+      .faq-item_description
+        p= faqItemDescription
