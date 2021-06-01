@@ -5,6 +5,7 @@
   "author": "Vashkevich Dmitrii",
   "license": "ISC",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -18,6 +19,8 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "test": "npm run editorconfig",
     "build": "gulp build",
     "start": "gulp"
   },
@@ -25,7 +28,6 @@
     "*.json",
     "*.js",
     "src/*.pug",
-    "src/scripts/**/*.js",
     "src/scss/**/*.sсss"
   ],
   "engines": {

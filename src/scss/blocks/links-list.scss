@@ -1,0 +1,12 @@
+.links-list {
+  @include List-Reset();
+}
+
+.links-list__item {
+  font-size: 14px;
+  line-height: 29px;
+}
+
+.links-list__link {
+  color: inherit;
+}

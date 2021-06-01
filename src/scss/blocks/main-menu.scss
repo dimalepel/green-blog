@@ -1,0 +1,17 @@
+.main-menu {
+  @include List-Reset();
+}
+
+.main-menu__item {
+  font-size: 14px;
+  line-height: 16px;
+
+  .page-header__main-menu & {
+    text-align: center;
+  }
+}
+
+.main-menu__link {
+  color: inherit;
+  text-transform: uppercase;
+}

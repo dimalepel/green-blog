@@ -1,0 +1,40 @@
+.logo {
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo__thumbnail {
+  display: block;
+  margin-right: 20px;
+
+  .page-footer__logo & {
+    margin-right: 17px;
+    width: 42px;
+  }
+}
+
+.logo__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: $temp-dark-2;
+
+  .page-footer__logo & {
+    font-size: 27px;
+  }
+}
+
+.logo__description {
+  margin-top: 1px;
+  margin-bottom: 0;
+  letter-spacing: -0.1px;
+  line-height: 1;
+  color: $temp-gray;
+
+  .page-footer__logo & {
+    font-size: 12px;
+  }
+}

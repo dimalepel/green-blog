@@ -1,0 +1,28 @@
+.articles {
+  padding-bottom: 65px;
+
+  &--recommended {
+    padding-top: 63px;
+    padding-bottom: 72px;
+    border-top: 1px solid $temp-gray-2;
+  }
+}
+
+.articles__list {
+  @include List-Reset();
+}
+
+.articles__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 29px;
+  margin-bottom: 27px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $temp-gray-2;
+  }
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+}

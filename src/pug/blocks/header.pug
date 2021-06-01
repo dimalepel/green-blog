@@ -1,0 +1,17 @@
+header.page-header
+  .container.page-header__top
+    a(href="/").logo.page-header__logo
+      img(src="images/pic-logo.png").logo__thumbnail
+      .logo__content
+        p.logo__title GreenBlog
+        p.logo__description краткое описание сайта
+    a(href="mailto:info@green.by").page-header__link.page-header__link--main.has-icon.has-icon--mail info@green.by
+    a(href="tel:+ 375 (33) 347-15-08").page-header__link.page-header__link--phone.has-icon.has-icon--phone + 375 (33) 347-15-08
+    a(href="#").page-header__link.page-header__link--order-call.button Заказать звонок
+  nav.page-header__navigation
+    .container
+      - var mainMenuPages = ['Главная', 'Каталог', 'Новости', 'О нас', 'Доставка и оплата', 'Контакты'];
+      ul.main-menu.page-header__main-menu
+        each val in mainMenuPages
+          li.main-menu__item
+            a(href="#").main-menu__link= val

@@ -1,0 +1,32 @@
+.has-icon {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    margin-right: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--mail {
+    &::before {
+      height: 9px;
+      background-image: url("../images/icon-mail.png");
+    }
+  }
+
+  &--phone {
+    &::before {
+      height: 14px;
+      background-image: url("../images/icon-phone.png");
+    }
+  }
+
+  &--location {
+    &::before {
+      height: 19px;
+      background-image: url("../images/icon-location.png");
+    }
+  }
+}

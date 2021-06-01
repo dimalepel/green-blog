@@ -1,0 +1,36 @@
+extends ../base
+
+block vars
+  - var pageTitle = "Страница";
+
+block content
+  .container
+    ul.breadcrumbs
+      li.breadcrumbs__item
+        a(href="#").breadcrumbs__link Главная
+      li.breadcrumbs__item
+        a(href="#").breadcrumbs__link Новости
+      li.breadcrumbs__item Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    section.single-page
+      header.single-page__header
+        .single-page__header-content
+          h1.page-title.single-page__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          p.single-page__date 21 / 03 / 2021
+          p.single-page__description Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.
+        img(src="images/news-3.png").single-page__thumbnail
+      .single-page__content
+        h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.
+        ul.custom-list
+          li It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout;
+          li The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English;
+          li Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+        p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+  section.articles.articles--recommended
+    .container
+      h2.section-title Возможно Вас заинтересует
+      ul.articles__list
+        +articlesItem('news-1.png', '21 / 03 / 2021', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.')
+        +articlesItem('news-2.png', '21 / 03 / 2021', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.')

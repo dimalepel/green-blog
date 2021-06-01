@@ -1,0 +1,34 @@
+footer.page-footer
+  .container
+    .page-footer__grid
+      .page-footer__item.page-footer__item--column
+        ul.contacts
+          li.contacts__item
+            a(href="tel:").contacts__link.contacts__link--phone.has-icon.has-icon--phone + 375 (33) 347-15-08
+          li.contacts__item
+            a(href="mailto:").contacts__link.contacts__link--mail.has-icon.has-icon--mail info@green.by
+          li.contacts__item
+            span.has-icon.has-icon--location ул. Олимпийская 4, 2й этаж
+        p.page-footer__copyright 2020 © GreenBlog. Все права защищены.
+      .page-footer__item
+        p.page-footer__title Каталог
+        - var linkListPages = ['Системы электрического отопления', 'Промышленное оборудование', 'Запчасти  к бытовой технике', 'Системы антиобледенения', 'Система EnstoNet', 'Комплектующие'];
+        ul.links-list
+          each val in linkListPages
+            li.links-list__item
+              a(href="#").links-list__link= val
+      .page-footer__item
+        p.page-footer__title Клиентам
+        - var linkListPagesRight = ['О компании', 'Полезная информация', 'Сертификаты', 'Доставка и оплата', 'Контакты'];
+        ul.links-list
+          each val in linkListPagesRight
+            li.links-list__item
+              a(href="#").links-list__link= val
+      .page-footer__item.page-footer__item--column
+        a(href="/").logo.page-footer__logo
+          img(src="images/pic-logo.png").logo__thumbnail
+          .logo__content
+            p.logo__title GreenBlog
+            p.logo__description краткое описание сайта
+        p.page-footer__author Разработка сайта - веб-студия <br>
+          a(href="#") Narisuemvse.by

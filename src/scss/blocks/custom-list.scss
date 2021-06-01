@@ -1,0 +1,23 @@
+.custom-list {
+  @include List-Reset(25px, 20px, 32px);
+
+  & li {
+    position: relative;
+    padding-left: 23px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 8px;
+      height: 8px;
+      background-color: $temp-green;
+      border-radius: 100%;
+    }
+  }
+}

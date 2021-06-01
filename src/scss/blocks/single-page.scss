@@ -1,0 +1,58 @@
+.single-page {
+  margin-top: 45px;
+  margin-bottom: 62px;
+}
+
+.single-page__header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.single-page__header-content {
+  margin-right: 70px;
+}
+
+.single-page__title {
+  margin-top: -6px;
+  margin-bottom: 12px;
+  line-height: 46px;
+}
+
+.single-page__date {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: $temp-gray;
+}
+
+.single-page__description {
+  margin-top: 25px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.single-page__thumbnail {
+  flex-shrink: 0;
+  width: 362px;
+  margin-left: auto;
+}
+
+.single-page__content {
+  font-size: 14px;
+  line-height: 24px;
+
+  & p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  & h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  & p + h2 {
+    margin-top: 40px;
+  }
+}

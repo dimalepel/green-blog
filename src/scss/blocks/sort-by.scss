@@ -1,0 +1,23 @@
+.sort-by {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.sort-by__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sort-by__link {
+  margin-left: 15px;
+  color: $temp-green;
+  text-decoration: underline;
+
+  &.active {
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

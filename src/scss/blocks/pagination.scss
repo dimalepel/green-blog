@@ -1,0 +1,54 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__pages {
+  @include List-Reset();
+  display: flex;
+  align-items: center;
+}
+
+.pagination__pages-item {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.pagination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid $temp-gray-4;
+  border-radius: 100%;
+
+  &:hover {
+    border-color: $temp-green;;
+  }
+
+  &:not(a) {
+    border-color: $base-white;
+
+    &:hover {
+      border-color: $base-white;
+    }
+  }
+
+  &--control {
+    border-color: $base-white;
+
+    &:hover {
+      border-color: $base-white;
+    }
+  }
+
+  .current & {
+    color: $base-white;
+    background-color: $temp-green;
+    border-color: $temp-green;
+  }
+}

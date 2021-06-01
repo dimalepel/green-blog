@@ -1,0 +1,57 @@
+.page-header__top {
+  display: flex;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 14px;
+}
+
+.page-header__logo {
+  margin-right: auto;
+}
+
+.page-header__link {
+  margin-left: 30px;
+  font-size: 15px;
+  line-height: 16px;
+
+  &--mail {
+    color: $temp-dark-3;
+    text-decoration: underline;
+  }
+
+  &--phone {
+    font-weight: 700;
+  }
+
+  &--order-call {
+    padding: 12px 14px 11px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    color: $base-white;
+    text-transform: uppercase;
+    background-color: $temp-green;
+    border-radius: 21px;
+    border: 1px solid $temp-green;
+
+    &:hover {
+      background-color: $base-white;
+    }
+  }
+}
+
+.page-header__navigation {
+  border-top: 1px solid $temp-gray-2;
+  box-shadow: 0 4px 6px rgba(43, 43, 43, 0.15)
+}
+
+.page-header__main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 9px;
+  margin-right: 13px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}

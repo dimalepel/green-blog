@@ -1,0 +1,20 @@
+.contacts {
+  @include List-Reset(5px);
+}
+
+.contacts__item {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.contacts__link {
+  &--phone {
+    font-weight: 700;
+  }
+
+  &--mail {
+    color: $temp-blue;
+    text-decoration: underline;
+  }
+}

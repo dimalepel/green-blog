@@ -1,0 +1,23 @@
+.breadcrumbs {
+  @include List-Reset(23px, 10px);
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__item {
+  font-size: 12px;
+  line-height: 16px;
+  color: $temp-gray;
+
+  &:not(:first-child) {
+    &::before {
+      content: "/";
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  color: $temp-dark;
+}

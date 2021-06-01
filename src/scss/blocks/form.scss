@@ -1,0 +1,41 @@
+.form__field {
+  flex-grow: 1;
+  padding: 10px 24px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $temp-gray-3;
+  border: none;
+  background-color: $base-white;
+}
+
+.form__button {
+  padding: 4px 22px 4px 19px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $base-white;
+  background-color: $temp-green;
+  border: 1px solid $temp-green;
+
+  &:hover {
+    color: $temp-green;
+    background-color: $base-white;
+
+    &::before {
+      background-image: url("../images/icon-search--hover.png");
+    }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    height: 19px;
+    margin-right: 6px;
+    background-image: url("../images/icon-search.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include Transition();
+  }
+}

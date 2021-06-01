@@ -1,7 +1,7 @@
 // Вставка миксина @include mixin_name();
 
 // Шрифт
-@mixin Font($font-name: "Montserrat", $font-weight: 400, $font-style: normal) {
+@mixin Font($font-name: "Inter", $font-weight: 400, $font-style: normal) {
   font-family: $font-name, "Arial", sans-serif; // шрифты без засечек
   font-weight: $font-weight;
   font-style: $font-style;

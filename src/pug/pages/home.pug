@@ -1,7 +1,46 @@
 extends ../base
 
 block vars
-  - var pageTitle = "Главная";
+  - var pageTitle = "Новости";
 
 block content
-  
+  .container
+    ul.breadcrumbs
+      li.breadcrumbs__item
+        a(href="#").breadcrumbs__link Главная
+      li.breadcrumbs__item Новости
+    h1.page-title Новости
+    section.search
+      form.form.search__form
+        input(type="text", placeholder="Поиск по записям").form__field
+        button(type="submit").form__button Найти
+      .sort-by
+        p.sort-by__title Сортировать по:
+          a(href="#").sort-by__link дате по возрастанию
+          a(href="#").sort-by__link.active дата по убыванию
+    section.articles
+      ul.articles__list
+        +articlesItem('news-1.png', '21 / 03 / 2021', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.')
+        +articlesItem('news-2.png', '21 / 03 / 2021', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.')
+        +articlesItem('news-3.png', '21 / 03 / 2021', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.')
+        +articlesItem('news-4.png', '21 / 03 / 2021', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.')
+        +articlesItem('news-5.png', '21 / 03 / 2021', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Donec porttitor, sapien vitae tristique condimentum, felis velit porta diam, vestibulum efficitur nisi nibh sed sem. Donec ornare non nisl a aliquet. Aenean molestie ac tortor varius tempus. Donec quis tincidunt metus, non imperdiet est. Praesent in pulvinar quam.')
+      .pagination
+        a(href="#").pagination__item.pagination__item--control.pagination__item--prev
+          img(src="../images/icon-prev.png").pagination__icon
+        - var n = 1;
+        ul.pagination__pages
+          while n < 4
+            if n == 1
+              li.pagination__pages-item.current
+                a(href="#").pagination__item= n++
+            else
+              li.pagination__pages-item
+                a(href="#").pagination__item= n++
+          li.pagination__pages-item
+            span.pagination__item ...
+          li.pagination__pages-item
+            a(href="#").pagination__item 6
+        a(href="#").pagination__item.pagination__item--control.pagination__item--next
+          img(src="../images/icon-next.png").pagination__icon
+

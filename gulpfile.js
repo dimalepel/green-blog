@@ -131,4 +131,4 @@ function fImagesBuild() {
     .pipe(dest('build/images/'));
 }
 
-exports.build = series(fClean, fPug, fScriptsBuild, fFontsCopy, fImagesBuild, fSVGSprites, fResourcesCopy, fStylesBuild);
+exports.build = series(fClean, fPug, fScriptsBuild, fFontsCopy, fImagesBuild, fResourcesCopy, fStylesBuild);
