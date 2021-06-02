@@ -9,14 +9,18 @@
   </head>
   <body>
     <div class="page-wrapper">
-      <header class="page-header">
+      <header class="page-header" id="page-header">
         <div class="container page-header__top"><a class="logo page-header__logo" href="/"><img class="logo__thumbnail" src="images/pic-logo.png">
             <div class="logo__content">
               <p class="logo__title">GreenBlog</p>
               <p class="logo__description">краткое описание сайта</p>
-            </div></a><a class="page-header__link page-header__link--main has-icon has-icon--mail" href="mailto:info@green.by">info@green.by</a><a class="page-header__link page-header__link--phone has-icon has-icon--phone" href="tel:+ 375 (33) 347-15-08">+ 375 (33) 347-15-08</a><a class="page-header__link page-header__link--order-call button" href="#">Заказать звонок</a></div>
+            </div></a>
+          <button class="page-header__menu-opener menu-toggler" type="button" id="menu-opener"><span class="visually-hidden">Открыть меню</span><span class="menu-toggler__icon"><span class="menu-toggler__icon-line"></span></span></button>
+        </div>
         <nav class="page-header__navigation">
+          <button class="page-header__menu-closer menu-toggler" type="button" id="menu-closer"><span class="visually-hidden">Закрыть меню</span><span class="menu-toggler__icon"><span class="menu-toggler__icon-line"></span></span></button>
           <div class="container">
+            <div class="page-header__links"><a class="page-header__link page-header__link--main has-icon has-icon--mail" href="mailto:info@green.by">info@green.by</a><a class="page-header__link page-header__link--phone has-icon has-icon--phone" href="tel:+ 375 (33) 347-15-08">+ 375 (33) 347-15-08</a><a class="page-header__link page-header__link--order-call button" href="#">Заказать звонок</a></div>
             <ul class="main-menu page-header__main-menu">
               <li class="main-menu__item"><a class="main-menu__link" href="#">Главная</a></li>
               <li class="main-menu__item"><a class="main-menu__link" href="#">Каталог</a></li>
@@ -90,7 +94,7 @@
               </ul>
               <p class="page-footer__copyright">2020 © GreenBlog. Все права защищены.</p>
             </div>
-            <div class="page-footer__item">
+            <div class="page-footer__item page-footer__item--catalog">
               <p class="page-footer__title">Каталог</p>
               <ul class="links-list">
                 <li class="links-list__item"><a class="links-list__link" href="#">Системы электрического отопления</a></li>
@@ -101,7 +105,7 @@
                 <li class="links-list__item"><a class="links-list__link" href="#">Комплектующие</a></li>
               </ul>
             </div>
-            <div class="page-footer__item">
+            <div class="page-footer__item page-footer__item--clients">
               <p class="page-footer__title">Клиентам</p>
               <ul class="links-list">
                 <li class="links-list__item"><a class="links-list__link" href="#">О компании</a></li>
