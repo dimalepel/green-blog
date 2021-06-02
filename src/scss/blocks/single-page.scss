@@ -6,10 +6,18 @@
 .single-page__header {
   display: flex;
   align-items: flex-start;
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .single-page__header-content {
   margin-right: 70px;
+
+  @media (max-width: 800px) {
+    margin-right: 0;
+  }
 }
 
 .single-page__title {
@@ -36,6 +44,13 @@
   flex-shrink: 0;
   width: 362px;
   margin-left: auto;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    max-width: 362px;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .single-page__content {

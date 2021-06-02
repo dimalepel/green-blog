@@ -10,14 +10,14 @@ footer.page-footer
           li.contacts__item
             span.has-icon.has-icon--location ул. Олимпийская 4, 2й этаж
         p.page-footer__copyright 2020 © GreenBlog. Все права защищены.
-      .page-footer__item
+      .page-footer__item.page-footer__item--catalog
         p.page-footer__title Каталог
         - var linkListPages = ['Системы электрического отопления', 'Промышленное оборудование', 'Запчасти  к бытовой технике', 'Системы антиобледенения', 'Система EnstoNet', 'Комплектующие'];
         ul.links-list
           each val in linkListPages
             li.links-list__item
               a(href="#").links-list__link= val
-      .page-footer__item
+      .page-footer__item.page-footer__item--clients
         p.page-footer__title Клиентам
         - var linkListPagesRight = ['О компании', 'Полезная информация', 'Сертификаты', 'Доставка и оплата', 'Контакты'];
         ul.links-list

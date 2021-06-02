@@ -1,10 +1,9 @@
 .breadcrumbs {
   @include List-Reset(23px, 10px);
-  display: flex;
-  align-items: center;
 }
 
 .breadcrumbs__item {
+  display: inline-block;
   font-size: 12px;
   line-height: 16px;
   color: $temp-gray;

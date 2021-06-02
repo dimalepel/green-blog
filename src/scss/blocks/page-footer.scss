@@ -1,19 +1,45 @@
 .page-footer {
   padding-top: 60px;
-  padding-bottom: 51px;
+  padding-bottom: 31px;
   border-top: 1px solid $temp-gray-2;
+
+  @media (max-width: 440px) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 }
 
 .page-footer__grid {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
+
+  @media (max-width: 440px) {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .page-footer__item {
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 20px;
+
+  @media (max-width: 440px) {
+    margin-right: 0;
+    margin-left: 0;
+
+    &--catalog {
+      order: -1;
+    }
+
+    &--clients {
+      order: -2;
+    }
+  }
 
   &--column {
     display: flex;
@@ -53,6 +79,11 @@
   line-height: 18px;
   color: $temp-dark-4;
   text-align: right;
+
+  @media (max-width: 440px) {
+    margin-left: 0;
+    text-align: left;
+  }
 
   & a {
     position: relative;

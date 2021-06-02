@@ -1,5 +1,6 @@
 .form__field {
   flex-grow: 1;
+  width: 100%;
   padding: 10px 24px;
   font-size: 14px;
   line-height: 24px;
@@ -9,7 +10,8 @@
 }
 
 .form__button {
-  padding: 4px 22px 4px 19px;
+  flex-shrink: 0;
+  padding: 9px 22px 9px 19px;
   font-size: 14px;
   line-height: 24px;
   color: $base-white;

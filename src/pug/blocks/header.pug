@@ -1,15 +1,24 @@
-header.page-header
+header#page-header.page-header
   .container.page-header__top
     a(href="/").logo.page-header__logo
       img(src="images/pic-logo.png").logo__thumbnail
       .logo__content
         p.logo__title GreenBlog
         p.logo__description краткое описание сайта
-    a(href="mailto:info@green.by").page-header__link.page-header__link--main.has-icon.has-icon--mail info@green.by
-    a(href="tel:+ 375 (33) 347-15-08").page-header__link.page-header__link--phone.has-icon.has-icon--phone + 375 (33) 347-15-08
-    a(href="#").page-header__link.page-header__link--order-call.button Заказать звонок
+    button(type="button")#menu-opener.page-header__menu-opener.menu-toggler
+      span.visually-hidden Открыть меню
+      span.menu-toggler__icon
+        span.menu-toggler__icon-line
   nav.page-header__navigation
+    button(type="button")#menu-closer.page-header__menu-closer.menu-toggler
+      span.visually-hidden Закрыть меню
+      span.menu-toggler__icon
+        span.menu-toggler__icon-line
     .container
+      .page-header__links
+        a(href="mailto:info@green.by").page-header__link.page-header__link--main.has-icon.has-icon--mail info@green.by
+        a(href="tel:+ 375 (33) 347-15-08").page-header__link.page-header__link--phone.has-icon.has-icon--phone + 375 (33) 347-15-08
+        a(href="#").page-header__link.page-header__link--order-call.button Заказать звонок
       - var mainMenuPages = ['Главная', 'Каталог', 'Новости', 'О нас', 'Доставка и оплата', 'Контакты'];
       ul.main-menu.page-header__main-menu
         each val in mainMenuPages

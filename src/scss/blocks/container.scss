@@ -4,4 +4,16 @@
   padding-left: 12px;
   padding-right: 12px;
   margin: 0 auto;
+
+  .page-header__navigation > & {
+    position: relative;
+
+    @media (max-width: 800px) {
+      position: initial;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      height: 100%;
+    }
+  }
 }

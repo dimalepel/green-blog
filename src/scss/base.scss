@@ -22,6 +22,10 @@ body {
   background-color: $base-white;
   overflow-x: hidden;
   //overflow: hidden;
+
+  &.overflow {
+    overflow: hidden;
+  }
 }
 
 img {
