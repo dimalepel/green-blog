@@ -22,7 +22,7 @@ function fClean() {
 
 function fFontsCopy() {
   return src('src/fonts/*.{woff,woff2}')
-    .pipe(dest('build/fonts/'))
+    .pipe(dest('build/assets/fonts/'))
     .pipe(browserSync.stream());
 }
 
@@ -43,7 +43,7 @@ function fPug() {
 
 function fImagesCopy() {
   return src('src/images/**/*.{png,jpg,jpeg}')
-    .pipe(dest('build/images/'));
+    .pipe(dest('build/assets/images/'));
 }
 
 function fStyles() {
@@ -63,7 +63,7 @@ function fStyles() {
       grid: true
     }))
     .pipe(sourcemap.write('.'))
-    .pipe(dest('build/styles/'))
+    .pipe(dest('build/assets/styles/'))
     .pipe(browserSync.stream());
 }
 
@@ -72,7 +72,7 @@ function fScripts() {
     .pipe(plumber())
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
-    .pipe(dest('build/scripts/'))
+    .pipe(dest('build/assets/scripts/'))
     .pipe(browserSync.stream());
 }
 
@@ -110,7 +110,7 @@ function fStylesBuild() {
       ],
       grid: true
     }))
-    .pipe(dest('build/styles/'));
+    .pipe(dest('build/assets/styles/'));
 }
 
 function fScriptsBuild() {
@@ -118,7 +118,7 @@ function fScriptsBuild() {
     .pipe(plumber())
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
-    .pipe(dest('build/scripts/'));
+    .pipe(dest('build/assets/scripts/'));
 }
 
 function fImagesBuild() {
@@ -128,7 +128,7 @@ function fImagesBuild() {
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(dest('build/images/'));
+    .pipe(dest('build/assets/images/'));
 }
 
 exports.build = series(fClean, fPug, fScriptsBuild, fFontsCopy, fImagesBuild, fResourcesCopy, fStylesBuild);
